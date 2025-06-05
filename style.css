@@ -172,9 +172,9 @@ textarea:focus {
 }
 @media (max-width: 620px) {
   .form-container {
+    width: 100%;
+    height: 100%;
     flex-direction: column;
-    width: auto;
-    height: auto;
   }
   .hero-title {
     flex-direction: column;
