@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>form validation</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Remix Icon library for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
     />
+    <!-- EmailJS library for sending form data via email -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <!-- EmailJS initialization script with public key -->
     <script type="text/javascript">
       (function () {
         emailjs.init({
@@ -22,8 +26,10 @@
     </script>
   </head>
   <body>
+    <!-- Decorative flower images -->
     <img class="flower1" src="flower.png" alt="flower" />
     <img class="flower2" src="flower.png" alt="flower" />
+    <!-- Form container -->
     <div class="form-container">
       <div class="hero-title">
         <h1>Let's Get Started</h1>
@@ -33,6 +39,7 @@
           saepe quibusdam modi!
         </p>
       </div>
+      <!-- Contact form -->
       <form id="form">
         <div class="input-holder">
           <div class="labInput">
@@ -41,12 +48,12 @@
           </div>
           <span id="name-error"></span>
         </div>
+        <!-- Email input field -->
         <div class="input-holder">
           <div class="labInput">
             <label for="email">@</label>
             <input id="email" type="email" placeholder="Enter Email" />
           </div>
-
           <span id="email-error"></span>
         </div>
         <div class="input-holder">
@@ -59,11 +66,11 @@
           ></textarea>
           <span id="message-error"></span>
         </div>
-        <!-- From Uiverse.io by bandirevanth -->
-
         <button class="custom-btn btn-1" type="submit">submit</button>
       </form>
     </div>
+
+    <!-- Thank you message shown after successful submission -->
     <div id="thenkMessage">
       <h1>
         ✅ Thank you! Your message has been sent successfully. I’ll get back to

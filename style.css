@@ -1,5 +1,5 @@
+/* Importing custom Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap");
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -15,6 +15,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+/* Main form wrapper */
 .form-container {
   width: 900px;
   height: 500px;
@@ -23,6 +24,8 @@ body {
   border-radius: 20px;
   overflow: hidden;
 }
+
+/* Left side (title and description) */
 .hero-title {
   background: rgba(47, 46, 46, 0.08);
   text-shadow: 0 0 5px #ffb6c1, 0 0 10px #f8a1af;
@@ -38,6 +41,7 @@ body {
   text-align: center;
 }
 
+/* Right side form layout */
 #form {
   display: flex;
   gap: 2rem;
@@ -48,6 +52,8 @@ body {
   background: rgba(255, 254, 254, 0.356);
   backdrop-filter: blur(30px);
 }
+
+/* Error message style */
 span {
   font-size: small;
   color: red;
@@ -55,6 +61,10 @@ span {
 .input-holder {
   display: flex;
   flex-direction: column;
+}
+input,
+textarea {
+  color: #bc355d;
 }
 .labInput {
   display: flex;
@@ -69,22 +79,21 @@ label {
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
-
 input {
   border: none;
-  border-bottom: 2px solid #f4a8c6; /* soft pink */
+  border-bottom: 2px solid #f4a8c6;
   padding: 8px 4px;
   font-size: 16px;
   transition: all 0.3s ease;
   background-color: transparent;
   outline: none;
-  width: 250px;
+  width: 300px;
 }
-
 input:focus {
-  border-bottom: 2px solid #e75480; /* deeper pink on focus */
+  border-bottom: 2px solid #e75480;
 }
 textarea {
+  resize: none;
   border: none;
   border-bottom: 1px solid pink;
   outline: none;
@@ -92,11 +101,12 @@ textarea {
   padding: 8px 4px;
   font-size: 16px;
   transition: all 0.3s ease;
-  width: 250px;
+  width: 300px;
 }
 textarea:focus {
-  border-bottom: 2px solid #e75480;
+  border-bottom: 1px solid #e75480;
 }
+/* Floating decorative flower images */
 .flower1 {
   position: absolute;
   width: 300px;
@@ -113,7 +123,6 @@ textarea:focus {
     transform: rotate(360deg);
   }
 }
-
 .flower2 {
   position: absolute;
   width: 500px;
@@ -122,14 +131,12 @@ textarea:focus {
   left: 0%;
   top: 10%;
 }
-
-/* From Uiverse.io by bandirevanth */
+/* Submit button base style */
 .custom-btn {
   color: #fff;
   border-radius: 7px;
   padding: 8px 35px;
   font-size: 20px;
-  /* width: 200px; */
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -139,7 +146,6 @@ textarea:focus {
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-
 .btn-1 {
   background: rgb(201, 9, 240);
   background: linear-gradient(
@@ -154,13 +160,13 @@ textarea:focus {
   height: 0%;
   width: 2px;
 }
-
 .btn-1:hover {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
     -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
+/* Thank you message section (initially hidden) */
 #thenkMessage {
   width: 700px;
   text-shadow: 0 0 5px #ffb6c1, 0 0 10px #ba485b;
@@ -170,7 +176,8 @@ textarea:focus {
   display: none;
   text-align: center;
 }
-@media (max-width: 620px) {
+/* Responsive adjustments for smaller screens */
+@media (max-width: 680px) {
   .form-container {
     width: 100%;
     height: 100%;
@@ -193,14 +200,17 @@ textarea:focus {
     width: 100%;
     padding: 20px 6px;
   }
+
   .flower2,
   .flower1 {
     display: none;
   }
+
   #thenkMessage {
     font-size: medium;
     padding: 0 5px;
   }
+
   input {
     padding: 8px 4px;
     width: 300px;
